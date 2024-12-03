@@ -1,6 +1,6 @@
 let anchors = document.querySelectorAll('#header nav a');
 let sections = document.querySelectorAll('.section-ing');
-let selected = document.querySelector('.selected');
+let selected = document.querySelector('#sistemas');
 anchors = Array.from(anchors);
 
 const observer = new IntersectionObserver(
@@ -10,7 +10,7 @@ const observer = new IntersectionObserver(
         section.className = 'selected'
         selected = section
     } }) },
-    { root: null, threshold: 0.3 }
+    { root: null, threshold: 0.2 }
 );
 
 sections.forEach(s => observer.observe(s));
